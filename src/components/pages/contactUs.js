@@ -8,7 +8,7 @@ const ContactUs = () => {
     const [Feedback, setFeedback] = useState("");
 
     const sendFeedback =()=>{
-    Axios.post("http://localhost:8005/AddEmail", {
+    Axios.post("https://better-health-server-rbzj.onrender.com/AddEmail", {
         email:Email,
         feedback:Feedback,
       }).then((res) => {console.log(res.data);})
