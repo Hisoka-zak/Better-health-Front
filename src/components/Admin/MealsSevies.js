@@ -15,14 +15,14 @@ const MealsSevies = () => {
     let Navigate = useNavigate();
 
     useEffect(()=>{
-        axios.get('http://localhost:8005/getMeals')
+        axios.get('https://better-health-server-rbzj.onrender.com/getMeals')
         .then((Mealsdata)=>{setMealsData(Mealsdata.data)})
         .catch((err)=>console.log('Error: ',err)) 
         return;  
     },[])
     
     const handleDelete = (id) =>{
-        axios.delete('http://localhost:8005/deleteMeals/'+id)
+        axios.delete('https://better-health-server-rbzj.onrender.com/deleteMeals/'+id)
         .then(res => {console.log(res)})
         .catch(errr => console.log(errr))
         alert(' Meal deleted Successfully 👍🏼 ')
