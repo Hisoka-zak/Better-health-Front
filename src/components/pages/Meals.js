@@ -7,7 +7,7 @@ const Meals = () => {
     let [MealsData,setMealsData] = useState([]);
 
 useEffect(()=>{
-    axios.get('http://localhost:8005/getMeals')
+    axios.get('https://better-health-server-rbzj.onrender.com/getMeals')
     .then((MealsData)=>{setMealsData(MealsData.data)})
     .catch((err)=>console.log('Error: ',err))   
 },[])
