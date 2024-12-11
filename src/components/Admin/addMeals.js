@@ -21,7 +21,7 @@ function AddMeals() {
           return;
          }   
       
-      Axios.post("http://localhost:8005/AddMeals", {
+      Axios.post("https://better-health-server-rbzj.onrender.com/AddMeals", {
         mealsID:mealsID,
         calories:calories,
         Mname:Mname,
