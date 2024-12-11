@@ -6,7 +6,7 @@ const Feedback = () => {
     let [Emails,setEmail] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:8005/getEmail')
+        axios.get('https://better-health-server-rbzj.onrender.com/getEmail')
         .then((Emails)=>{setEmail(Emails.data)})
         .catch((err)=>console.log('Error: ',err)) 
         return;  
