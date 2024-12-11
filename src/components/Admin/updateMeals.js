@@ -15,7 +15,7 @@ function UpdateMeals() {
 
     
          useEffect(()=>{
-            Axios.get('http://localhost:8005/getMeals/'+id)
+            Axios.get('https://better-health-server-rbzj.onrender.com/getMeals/'+id)
             .then((Meals)=>{console.log(Meals)
                 setNewMname(Meals.data.Mname)
                 setNewPrice(Meals.data.price)
@@ -29,7 +29,7 @@ function UpdateMeals() {
 
 
         const UpdateMeals = () =>{
-            Axios.put('http://localhost:8005/UpdateMeals/'+id, 
+            Axios.put('https://better-health-server-rbzj.onrender.com/UpdateMeals/'+id, 
             {mealsID,calories,Mname,price,imgUrl})
             .then((res)=>{console.log(res)})
             .catch(err=>console.log(err))
